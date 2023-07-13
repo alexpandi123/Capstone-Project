@@ -45,6 +45,9 @@ const AddNewWeapon = () => {
                 <FloatingLabel controlId="floatingDesc" label="Description" className="mb-2 col-sm-3">
                     <Form.Control style={{ height: '100px' }} type="string" placeholder="Password" />
                 </FloatingLabel>
+                <FloatingLabel controlId="floatingDesc" label="Path" className="mb-2 col-sm-3">
+                    <Form.Control type="string" placeholder="Password" />
+                </FloatingLabel>
                 <Button className="mt-3" onClick={() => onClick()} variant="outline-danger">Submit</Button>
         </div>
     </>

@@ -4,6 +4,10 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
+import AK47Page from "./AK-47";
+import M16Page from "./M-16";
+import { Link } from "react-router-dom";
+import { Nav } from "react-bootstrap";
 
 const Main = () => {
     const [ weaponInfo, setWeaponInfo ] = useState([]);
@@ -20,15 +24,24 @@ const Main = () => {
     useEffect(() => {mainPageEntries()}, []);
 
 
+    const onClick = (event) => {
+       console.log(`Fetching results...`);
+    };
+
 
     return(
         <Container>
       <Row>
-        <Col className="d-flex align-items-center justify-content-around m-5" xs={6} md={4}>
-            {weaponInfo.map(weapon => (
-                            <div key={weapon._id} className="card-img-top" style={{objectFit: "cover"}}><Image src={`${weapon.image}`} thumbnail/></div>
-                        ))}
-        </Col>
+            <Col className="d-flex flex-column align-items-center justify-content-between mt-5">
+                {weaponInfo.map(weapon => (
+                                <div key={weapon._id} onClick={(event) => onClick(event, "")} style={{objectFit: "cover"}}>
+                                    <Nav className="me-auto">
+                                        <Nav.Link as={Link} to={`${weapon.path}`}><Image src={`${weapon.image}`} fluid thumbnail/></Nav.Link>
+                                    </Nav>
+                                </div>
+                            ))}
+                            
+            </Col>
       </Row>
     </Container>
     );

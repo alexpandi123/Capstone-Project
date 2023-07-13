@@ -10,10 +10,12 @@ export default function Navigation() {
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
                   <Nav.Link as={Link} to="/add-new-weapon">Add a new Weapon</Nav.Link>
-                  <Nav.Link as={Link} to="/add-new-weapon">Add a new Weapon</Nav.Link>
+                  <Nav.Link as={Link} to="/AK47-details">Button</Nav.Link>
               </Nav>
             </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 };
+
+// TEST <Nav.Link as={Link} to="/AK-47-details">Button</Nav.Link> 

@@ -9,6 +9,7 @@ export const weaponSchema = mongoose.Schema({
     type: {type: String, require: true},
     description: {type: String, require: true},
     image: {type: String, require: true},
+    path: {type: String, require: true},
     modifiedAt: Date,
 });
 
