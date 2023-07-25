@@ -13,7 +13,6 @@ router.get("/", async (request, response) => {
 
     const projectionExpression = {
         __v: 0,
-        modifiedAt: 0,
     };
 
     const weapons = await Weapon
@@ -42,10 +41,10 @@ router.get("/:weaponId", async (request, response) => {
 
 // POST
 router.post("/add-weapon", async (request, response) => {
-    const { name, countryOfOrigin, designYear, effectiveFiringRange, rateOfFire, type, description } = request.body;
+    const { name, countryOfOrigin, designYear, effectiveFiringRange, rateOfFire, type, description, image, path } = request.body;
     console.log(request.body);
 
-    const weapon = new Weapon({name, countryOfOrigin, designYear, effectiveFiringRange, rateOfFire, type, description});
+    const weapon = new Weapon({name, countryOfOrigin, designYear, effectiveFiringRange, rateOfFire, type, description, image, path});
     await weapon.save();
 
     response.send("Weapon Added successfully!");

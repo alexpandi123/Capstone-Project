@@ -16,7 +16,7 @@ const AddNewWeaponPage = (props) => {
                     body: JSON.stringify(formData),
                     headers: {'Content-Type': 'application/json'}
                 })
-        event.target.reset();
+        // event.target.reset();
     };
 
     return(
@@ -43,11 +43,11 @@ const AddNewWeaponPage = (props) => {
                         <FloatingLabel label="Type" className="mb-2 col-sm-3">
                             <Form.Control name="type" onChange={(event) => setformData({...formData, type: event.target.value})} type="string"  placeholder="type" />
                         </FloatingLabel>
-                        <FloatingLabel label="Image" className="mb-2 col-sm-3">
-                            <Form.Control name="image" onChange={(event) => setformData({...formData, image: event.target.value})} type="string" placeholder="image" /> 
-                        </FloatingLabel>
                         <FloatingLabel label="Description" className="mb-2 col-sm-3">
                             <Form.Control name="description" onChange={(event) => setformData({...formData, description: event.target.value})} style={{ height: '100px' }} type="string" placeholder="description"  />
+                        </FloatingLabel>
+                        <FloatingLabel label="Image" className="mb-2 col-sm-3">
+                            <Form.Control name="image" onChange={(event) => setformData({...formData, image: event.target.value})} type="URL" placeholder="image" /> 
                         </FloatingLabel>
                         <FloatingLabel label="Path" className="mb-2 col-sm-3">
                             <Form.Control name="path" onChange={(event) => setformData({...formData, path: event.target.value})} type="string"  placeholder="path" />
