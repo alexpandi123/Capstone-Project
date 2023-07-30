@@ -16,7 +16,7 @@ const AddNewWeaponPage = (props) => {
                     body: JSON.stringify(formData),
                     headers: {'Content-Type': 'application/json'}
                 })
-        // event.target.reset();
+        event.target.reset();
     };
 
     return(

@@ -4,8 +4,6 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
-import AK47Page from "./AK-47";
-import M16Page from "./M-16";
 import { Link } from "react-router-dom";
 import { Nav } from "react-bootstrap";
 

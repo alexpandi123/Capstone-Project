@@ -1,0 +1,1 @@
+export const RESERVATIONS_PAGE_SIZE = 9;

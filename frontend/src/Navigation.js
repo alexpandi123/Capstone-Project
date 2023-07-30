@@ -10,7 +10,7 @@ export default function Navigation() {
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="">
                   <Nav.Link as={Link} to="/add-new-weapon">Add a new Weapon</Nav.Link>
-                  <Nav.Link as={Link} to="/AK47-details">Sign in</Nav.Link>
+                  <Nav.Link as={Link} to="/user-sign-in">Sign in</Nav.Link>
               </Nav>
             </Navbar.Collapse>
       </Container>
