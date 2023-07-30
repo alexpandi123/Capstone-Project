@@ -6,7 +6,27 @@ export const router = express.Router();
 
 
 // GET
-router.get("/", async (request, response) => {
+
+router.get("/all", async (request, response) => {
+    response.setHeader("Content-Type", "application/json");
+
+    const projectionExpression = {
+        __v: 0,
+    };
+
+    const weapons = await Weapon
+    .find({}, projectionExpression)
+
+    if(weapons.length > 1) {
+        console.log(`Fetched ${weapons.length} weapons`);
+    } else {
+        console.log(`Fetched ${weapons.length} weapon`);
+    }
+
+    response.send(JSON.stringify(weapons));
+});
+
+router.get("/weapon-page", async (request, response) => {
     response.setHeader("Content-Type", "application/json");
     
     const page = request.query.page || 1;
@@ -17,7 +37,6 @@ router.get("/", async (request, response) => {
 
     const weapons = await Weapon
     .find({}, projectionExpression)
-    .sort({name: 1})
     .skip((page - 1) * RESERVATIONS_PAGE_SIZE)
     .limit(RESERVATIONS_PAGE_SIZE);
 
