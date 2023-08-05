@@ -1,18 +1,19 @@
-import Image from 'react-bootstrap/Image';
-
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import NorincoModel from "./3dModels/norinco_type_86s/Low-poly_norinco_type_86s";
 
 const Norinco86sPage = () => {
 
-    const onClick = (event) => {
-        console.log("Clicked Norinco86s Image, Fetching results...");
-    };
-
     return(
         <>
-        <div>
-            <Image className='mt-3 responsive' onClick={(event) => onClick(event, "")} 
-            src="https://modernfirearms.net/userfiles/_thumbs/Images/assault/as28/type86s.jpg"/>
-        </div>
+            <div style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+                <Canvas>
+                    <directionalLight position={[1,1,1]} intensity={10} />
+                    <directionalLight position={[-1,-1,-1]} intensity={10} />
+                        <NorincoModel />
+                    <OrbitControls />
+                </Canvas>
+            </div>
         </>
     )
 };

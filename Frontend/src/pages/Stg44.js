@@ -1,18 +1,20 @@
-import Image from 'react-bootstrap/Image';
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import STG44Model from "./3dModels/stg_-_44__sturmgewehr/Stg_-_44__sturmgewehr";
 
 
 const Stg44Page = () => {
 
-    const onClick = (event) => {
-        console.log("Clicked Stg44 Image, Fetching results...");
-    };
-
     return(
         <>
-        <div>
-            <Image className='mt-3 responsive' onClick={(event) => onClick(event, "")} 
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Sturmgewehr44_noBG.jpg/1920px-Sturmgewehr44_noBG.jpg"/>
-        </div>
+            <div style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+                <Canvas>
+                    <directionalLight position={[1,1,1]} intensity={10} />
+                    <directionalLight position={[-1,-1,-1]} intensity={10} />
+                        <STG44Model />
+                    <OrbitControls />
+                </Canvas>
+            </div>
         </>
     )
 };

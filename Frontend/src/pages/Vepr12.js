@@ -1,18 +1,20 @@
-import Image from 'react-bootstrap/Image';
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import VEPRModel from "./3dModels/vepr_vpo_205-00/Vepr_vpo_205-00";
 
 
 const Vepr12Page = () => {
 
-    const onClick = (event) => {
-        console.log("Clicked Vepr12 Image, Fetching results...");
-    };
-
     return(
         <>
-        <div>
-            <Image className='mt-3 responsive' onClick={(event) => onClick(event, "")} 
-            src="https://fimegroup.com/wp-content/themes/fime/assets/img/VPR-12-81-1200x434.jpg"/>
-        </div>
+            <div style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+                <Canvas>
+                    <directionalLight position={[1,1,1]} intensity={10} />
+                    <directionalLight position={[-1,-1,-1]} intensity={10} />
+                        <VEPRModel />
+                    <OrbitControls />
+                </Canvas>
+            </div>
         </>
     )
 };

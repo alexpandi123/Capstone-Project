@@ -1,18 +1,19 @@
-import Image from 'react-bootstrap/Image';
-
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import XM8Model from "./3dModels/xm8_rifle/Xm8_rifle";
 
 const Xm8Page = () => {
 
-    const onClick = (event) => {
-        console.log("Clicked Xm8 Image, Fetching results...");
-    };
-
     return(
         <>
-        <div>
-            <Image className='mt-3 responsive' onClick={(event) => onClick(event, "")} 
-            src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Xm8_sideview.jpg"/>
-        </div>
+            <div style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+                <Canvas>
+                    <directionalLight position={[1,1,1]} intensity={10} />
+                    <directionalLight position={[-1,-1,-1]} intensity={10} />
+                        <XM8Model />
+                    <OrbitControls />
+                </Canvas>
+            </div>
         </>
     )
 };
