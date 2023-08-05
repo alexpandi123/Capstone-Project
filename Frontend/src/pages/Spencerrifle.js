@@ -1,18 +1,20 @@
-import Image from 'react-bootstrap/Image';
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import Spencer1860Model from "./3dModels/1860_spencer_carbine_with_engravings/1860_spencer_carbine_with_engravings";
 
 
 const SpencerriflePage = () => {
 
-    const onClick = (event) => {
-        console.log("Clicked Spencerrifle Image, Fetching results...");
-    };
-
     return(
         <>
-        <div>
-            <Image className='mt-3 responsive' onClick={(event) => onClick(event, "")} 
-            src="https://upload.wikimedia.org/wikipedia/commons/1/15/M1865_REPEATING_RIFLE.jpg"/>
-        </div>
+            <div style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+                <Canvas>
+                    <directionalLight position={[1,1,1]} intensity={10} />
+                    <directionalLight position={[-1,-1,-1]} intensity={10} />
+                        <Spencer1860Model />
+                    <OrbitControls />
+                </Canvas>
+            </div>
         </>
     )
 };

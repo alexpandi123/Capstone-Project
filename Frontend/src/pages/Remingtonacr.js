@@ -1,18 +1,19 @@
-import Image from 'react-bootstrap/Image';
-
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import ACRModel from "./3dModels/bushmaster_acr/Adaptive_combat_rifle";
 
 const RemingtonacrPage = () => {
 
-    const onClick = (event) => {
-        console.log("Clicked RemingtonAcr Image, Fetching results...");
-    };
-
     return(
         <>
-        <div>
-            <Image className='mt-3 responsive' onClick={(event) => onClick(event, "")} 
-            src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Bushmaster_ACR.jpg"/>
-        </div>
+            <div style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+                <Canvas>
+                    <directionalLight position={[1,1,1]} intensity={20} />
+                    <directionalLight position={[-1,-1,-1]} intensity={20} />
+                        <ACRModel />
+                    <OrbitControls />
+                </Canvas>
+            </div>
         </>
     )
 };

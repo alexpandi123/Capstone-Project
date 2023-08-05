@@ -1,20 +1,21 @@
-import Image from 'react-bootstrap/Image';
-
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import MG42Model from "./3dModels/mg-42/Mg_42_ww2";
 
 const MG42Page = () => {
 
-    const onClick = (event) => {
-        console.log("Clicked MG-42 Image, Fetching results...");
-    };
-
     return(
         <>
-        <div>
-            <Image className='mt-3 responsive' onClick={(event) => onClick(event, "")} 
-            src="https://upload.wikimedia.org/wikipedia/commons/3/39/MG42_Sideview_2.jpg"/>
-        </div>
+            <div style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+                <Canvas>
+                    <directionalLight position={[1,1,1]} intensity={20} />
+                    <directionalLight position={[-1,-1,-1]} intensity={20} />
+                        <MG42Model />
+                    <OrbitControls />
+                </Canvas>
+            </div>
         </>
-    )
+    );
 };
 
 export default MG42Page;

@@ -1,18 +1,21 @@
-import Image from 'react-bootstrap/Image';
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import AK47Model from "./3dModels/ak-47/Ak-47_kalashnikov";
 
 
 const AK47Page = () => {
 
-    const onClick = (event) => {
-        console.log("Clicked AK-47 Image, Fetching results...");
-    };
 
     return(
         <>
-        <div>
-            <Image className='mt-3 responsive' onClick={(event) => onClick(event, "")} 
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/AK-47_type_II_noBG.png/1280px-AK-47_type_II_noBG.png"/>
-        </div>
+            <div style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+                <Canvas>
+                    <directionalLight position={[1,1,1]} intensity={20} />
+                    <directionalLight position={[-1,-1,-1]} intensity={20} />
+                        <AK47Model />
+                    <OrbitControls />
+                </Canvas>
+            </div>
         </>
     )
 };

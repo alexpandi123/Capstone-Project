@@ -1,18 +1,20 @@
-import Image from 'react-bootstrap/Image';
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import M1GarandModel from "./3dModels/m1garand/M1_garand";
 
 
 const M1garandPage = () => {
 
-    const onClick = (event) => {
-        console.log("Clicked MG-42 Image, Fetching results...");
-    };
-
     return(
         <>
-        <div>
-            <Image className='mt-3 responsive' onClick={(event) => onClick(event, "")} 
-            src="https://photo.weaponsystems.net/image/s-carousel/n-fa_ar_m1garand_p02.jpg/--/img/ws/fa_ar_m1garand_p02.jpg"/>
-        </div>
+            <div style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+                <Canvas>
+                    <directionalLight position={[1,1,1]} intensity={20} />
+                    <directionalLight position={[-1,-1,-1]} intensity={20} />
+                        <M1GarandModel />
+                    <OrbitControls />
+                </Canvas>
+            </div>
         </>
     )
 };

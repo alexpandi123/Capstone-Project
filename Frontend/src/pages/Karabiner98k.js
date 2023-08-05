@@ -1,18 +1,20 @@
-import Image from 'react-bootstrap/Image';
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import K98Model from "./3dModels/mauser_k98_sniper_rilfe/Mauser_k98_sniper_rilfe";
 
 
 const Karabiner98kPage = () => {
 
-    const onClick = (event) => {
-        console.log("Clicked MG-42 Image, Fetching results...");
-    };
-
     return(
         <>
-        <div>
-            <Image className='mt-3 responsive' onClick={(event) => onClick(event, "")} 
-            src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Kar_98K_AM021488_noBG.png"/>
-        </div>
+            <div style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+                <Canvas>
+                    <directionalLight position={[1,1,1]} intensity={15} />
+                    <directionalLight position={[-1,-1,-1]} intensity={15} />
+                        <K98Model />
+                    <OrbitControls />
+                </Canvas>
+            </div>
         </>
     )
 };

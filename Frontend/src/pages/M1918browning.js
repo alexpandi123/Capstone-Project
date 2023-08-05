@@ -1,18 +1,20 @@
-import Image from 'react-bootstrap/Image';
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import M1918a2Model from "./3dModels/m1918a2/M1918a2_bar";
 
 
 const M1918browningPage = () => {
 
-    const onClick = (event) => {
-        console.log("Clicked MG-42 Image, Fetching results...");
-    };
-
     return(
         <>
-        <div>
-            <Image className='mt-3 responsive' onClick={(event) => onClick(event, "")} 
-            src="https://upload.wikimedia.org/wikipedia/commons/7/75/Army_Heritage_Museum_B.A.R..jpg"/>
-        </div>
+            <div style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+                <Canvas>
+                    <directionalLight position={[1,1,1]} intensity={20} />
+                    <directionalLight position={[-1,-1,-1]} intensity={20} />
+                        <M1918a2Model />
+                    <OrbitControls />
+                </Canvas>
+            </div>
         </>
     )
 };

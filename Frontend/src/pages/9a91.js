@@ -1,18 +1,20 @@
-import Image from 'react-bootstrap/Image';
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import W9a91Model from "./3dModels/9a-91/9a-91";
 
 
 const W9a91Page = () => {
 
-    const onClick = (event) => {
-        console.log("Clicked 9a91 Image, Fetching results...");
-    };
-
     return(
         <>
-        <div>
-            <Image className='mt-3 responsive' onClick={(event) => onClick(event, "")} 
-            src="https://upload.wikimedia.org/wikipedia/commons/5/5d/9mm_KBP_9A-91_compact_assault_rifle_-_06.jpg"/>
-        </div>
+            <div style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+                <Canvas>
+                    <directionalLight position={[1,1,1]} intensity={30} />
+                    <directionalLight position={[-1,-1,-1]} intensity={60} />
+                        <W9a91Model />
+                    <OrbitControls />
+                </Canvas>
+            </div>
         </>
     )
 };

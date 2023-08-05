@@ -1,18 +1,19 @@
-import Image from 'react-bootstrap/Image';
-
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import LvoacModel from "./3dModels/lvoac/Low_poly_m4_carbine_lvoa-c";
 
 const LvoacPage = () => {
 
-    const onClick = (event) => {
-        console.log("Clicked MG-42 Image, Fetching results...");
-    };
-
     return(
         <>
-        <div>
-            <Image className='mt-3 responsive' onClick={(event) => onClick(event, "")} 
-            src="https://www.surplusstore.co.uk/media/catalog/product/cache/c91a9dde0a01154a265d6c02b06257a8/k/r/krytac-lvoa-c-foliage-green-1.jpg"/>
-        </div>
+            <div style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+                <Canvas>
+                    <directionalLight position={[1,1,1]} intensity={10} />
+                    <directionalLight position={[-1,-1,-1]} intensity={10} />
+                        <LvoacModel />
+                    <OrbitControls />
+                </Canvas>
+            </div>
         </>
     )
 };

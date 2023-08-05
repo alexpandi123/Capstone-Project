@@ -1,4 +1,6 @@
-import Image from 'react-bootstrap/Image';
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import G11Model from "./3dModels/g11/G11";
 
 
 const Hecklerkochg11Page = () => {
@@ -9,10 +11,14 @@ const Hecklerkochg11Page = () => {
 
     return(
         <>
-        <div>
-            <Image className='mt-3 responsive' onClick={(event) => onClick(event, "")} 
-            src="https://tabuksite.files.wordpress.com/2017/11/dsc_01311.jpg"/>
-        </div>
+            <div style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+                <Canvas>
+                    <directionalLight position={[1,1,1]} intensity={10} />
+                    <directionalLight position={[-1,-1,-1]} intensity={10} />
+                        <G11Model />
+                    <OrbitControls />
+                </Canvas>
+            </div>
         </>
     )
 };

@@ -4,11 +4,17 @@ import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import { Link } from "react-router-dom";
 import { Nav } from "react-bootstrap";
+import Spinner from 'react-bootstrap/Spinner';
 
 
 
 const Main = () => {
     const [ weaponInfo, setWeaponInfo ] = useState([]);
+    const [ loading, setLoading ] = useState(true);
+
+    const loadingSpinner = () => {
+        return <Spinner animation="grow" />;
+      };
 
     const mainPageEntries = () => {
         fetch(`http://localhost:3005/weapons/all`)
@@ -21,7 +27,7 @@ const Main = () => {
         })
     };
 
-    useEffect(() => {mainPageEntries()}, []);
+    useEffect(() => { mainPageEntries() }, []);
 
 
     const onClick = (event) => {
@@ -39,18 +45,19 @@ const Main = () => {
                     Your one place to learn about the weapons that have been used by humanity!
                 </h5>
             </div>
-            <div className="d-flex justify-content-center align-items-center flex-wrap sm-6 lg-4 xl-3 mt-5">
+
+            <div className="d-flex justify-content-center align-items-center flex-wrap sm-6 md-4 lg-4 xl-3 xxl-3 mt-5">
                 {weaponInfo.map(weapon => (
                     <span key={weapon._id} onClick={(event) => onClick(event, "")}>
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to={`${weapon.path}`}>
-                                    <Image style={{width: "30rem", height: "15rem", objectFit: "cover"}} src={`${weapon.image}`} thumbnail/>
+                                    <Image style={{width: "34vh", height: "19vh", objectFit: "contain"}} src={`${weapon.image}`} rounded thumbnail/>
                             </Nav.Link>
                         </Nav>
                     </span>
                 ))}
             </div>
-    </Container>
+        </Container>
     );
 };
 

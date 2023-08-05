@@ -1,18 +1,19 @@
-import Image from 'react-bootstrap/Image';
-
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import Ak12Model from "./3dModels/ak_12/Ak_12";
 
 const Ak12Page = () => {
 
-    const onClick = (event) => {
-        console.log("Clicked Ak12 Image, Fetching results...");
-    };
-
     return(
         <>
-        <div>
-            <Image className='mt-3 responsive' onClick={(event) => onClick(event, "")} 
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/AK-12.png/2560px-AK-12.png"/>
-        </div>
+            <div style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+                <Canvas>
+                    <directionalLight position={[1,1,1]} intensity={10} />
+                    <directionalLight position={[-1,-1,-1]} intensity={10} />
+                        <Ak12Model />
+                    <OrbitControls />
+                </Canvas>
+            </div>
         </>
     )
 };

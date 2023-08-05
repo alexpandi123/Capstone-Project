@@ -1,18 +1,20 @@
-import Image from 'react-bootstrap/Image';
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import Ar10Model from "./3dModels/ar-rifle/Ar_rifle_10";
 
 
 const Ar10Page = () => {
 
-    const onClick = (event) => {
-        console.log("Clicked MG-42 Image, Fetching results...");
-    };
-
     return(
         <>
-        <div>
-            <Image className='mt-3 responsive' onClick={(event) => onClick(event, "")} 
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/AR10_Armalite_vue_d%27ensemble_noBG.png/2560px-AR10_Armalite_vue_d%27ensemble_noBG.png"/>
-        </div>
+            <div style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+                <Canvas>
+                    <directionalLight position={[1,1,1]} intensity={20} />
+                    <directionalLight position={[-1,-1,-1]} intensity={20} />
+                        <Ar10Model />
+                    <OrbitControls />
+                </Canvas>
+            </div>
         </>
     )
 };

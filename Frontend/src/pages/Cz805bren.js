@@ -1,18 +1,20 @@
-import Image from 'react-bootstrap/Image';
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import CZ805BrenModel from "./3dModels/cz_805_bren/Low-poly_cz_805_bren";
 
 
 const Cz805brenPage = () => {
 
-    const onClick = (event) => {
-        console.log("Clicked Cz805bren Image, Fetching results...");
-    };
-
     return(
         <>
-        <div>
-            <Image className='mt-3 responsive' onClick={(event) => onClick(event, "")} 
-            src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Cz805.png"/>
-        </div>
+            <div style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+                <Canvas>
+                    <directionalLight position={[1,1,1]} intensity={10} />
+                    <directionalLight position={[-1,-1,-1]} intensity={10} />
+                        <CZ805BrenModel />
+                    <OrbitControls />
+                </Canvas>
+            </div>
         </>
     )
 };

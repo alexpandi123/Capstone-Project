@@ -1,18 +1,19 @@
-import Image from 'react-bootstrap/Image';
-
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import FNF2000Model from "./3dModels/fn_f2000/Low-poly_fn_f2000";
 
 const Fnf2000Page = () => {
 
-    const onClick = (event) => {
-        console.log("Clicked Fnf2000 Image, Fetching results...");
-    };
-
     return(
         <>
-        <div>
-            <Image className='mt-3 responsive' onClick={(event) => onClick(event, "")} 
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/FN_F2000S.JPG/2560px-FN_F2000S.JPG"/>
-        </div>
+            <div style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+                <Canvas>
+                    <directionalLight position={[1,1,1]} intensity={10} />
+                    <directionalLight position={[-1,-1,-1]} intensity={10} />
+                        <FNF2000Model />
+                    <OrbitControls />
+                </Canvas>
+            </div>
         </>
     )
 };

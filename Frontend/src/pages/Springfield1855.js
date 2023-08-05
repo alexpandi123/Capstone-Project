@@ -1,18 +1,20 @@
-import Image from 'react-bootstrap/Image';
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import SpringfielMusketdModel from "./3dModels/springfield-musket/1855_springfield_rifle_musket_-_game_asset";
 
 
 const Springfield1855Page = () => {
 
-    const onClick = (event) => {
-        console.log("Clicked MG-42 Image, Fetching results...");
-    };
-
     return(
         <>
-        <div>
-            <Image className='mt-3 responsive' onClick={(event) => onClick(event, "")} 
-            src="https://riaccdn.s3.us-east-2.amazonaws.com/dev_cdn/76/1216.jpg"/>
-        </div>
+            <div style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+                <Canvas>
+                    <directionalLight position={[1,1,1]} intensity={15} />
+                    <directionalLight position={[-1,-1,-1]} intensity={15} />
+                        <SpringfielMusketdModel />
+                    <OrbitControls />
+                </Canvas>
+            </div>
         </>
     )
 };
