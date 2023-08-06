@@ -39,10 +39,10 @@ const Main = () => {
         <Container>
             <div>
                 <h1 className="mt-5 text-center ">
-                    Welcome to the Weapons Wiki
+                    Welcome to the Weapons Wiki!
                 </h1>
                 <h5 className=" text-center ">
-                    Your one place to learn about the weapons that have been used by humanity!
+                    Click on a weapon below for more information about it..
                 </h5>
             </div>
 

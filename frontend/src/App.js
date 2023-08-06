@@ -1,7 +1,7 @@
-import Navigation from "./Components/Navigation";
+import Navigation from "./pages/main/Navigation";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import * as React from 'react';
-import Main from './pages/Main';
+import Main from './pages/main/Main';
 import AK47Page from "./pages/AK-47";
 import M16Page from "./pages/M-16";
 import AddNewWeaponPage from "./pages/AddnewWeapon.js";
