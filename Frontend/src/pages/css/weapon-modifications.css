@@ -29,8 +29,17 @@
 
 .controls_text_span {
     font-size: 1.3rem;
+    text-decoration: solid underline 0.1px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 li {
     list-style-type: none;
+}
+
+.controls_mouse_items {
+    font-size: 0.8rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
