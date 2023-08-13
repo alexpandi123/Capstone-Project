@@ -7,7 +7,7 @@ const Vepr12Page = () => {
 
     return(
         <div className="main_div">
-            <div className="controls_div_text">
+            <div className="controls_div_box">
                 <span className="controls_text_span">Controls:</span>
             <div className="controls_mouse_items">
                     <span>Left Click:
@@ -35,7 +35,7 @@ const Vepr12Page = () => {
             </div>
             <span className="weapon_inspection_text">Weapon Inspection</span>
             <h1 className="text-center mt-5">Vepr-12</h1>
-            <h6 className="text-center mb-5"></h6>
+            <h6 className="text-center mb-5"> </h6>
             <div className="weapon_model_box" style={{width: '95vw', height: '50vh', margin: 'auto'}}>
                 <Canvas>
                     <directionalLight position={[1,1,1]} intensity={10} />

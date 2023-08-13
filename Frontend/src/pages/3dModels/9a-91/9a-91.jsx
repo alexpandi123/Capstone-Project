@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/9a-91-dc1e831495214e228a148c2bd43fdb06
 Title: 9a-91
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function W9a91Model(props) {

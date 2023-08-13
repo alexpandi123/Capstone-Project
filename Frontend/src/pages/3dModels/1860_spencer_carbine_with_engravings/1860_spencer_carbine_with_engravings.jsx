@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/1860-spencer-carbine-with-engravings-94a
 Title: 1860 Spencer Carbine with engravings
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Spencer1860Model(props) {

@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/maximum-action-mod-xm-29-oicw-rifle-a331
 Title: [MAXIMUM ACTION MOD] XM-29 OICW Rifle
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function XM29OICWModel(props) {

@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/mg-42-ww2-c63321cd4f5045f78f511be20d7ea0
 Title: Mg 42 ww2
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function MG42Model(props) {

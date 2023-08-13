@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/ak-12-47b96856872b409d90281ae79b2429f0
 Title: Ak 12
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Ak12Model(props) {

@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/m16-a2-rifle-20c4bb925ca349c6b33aca176b8
 Title: M16 A2 Rifle
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function M16Model(props) {

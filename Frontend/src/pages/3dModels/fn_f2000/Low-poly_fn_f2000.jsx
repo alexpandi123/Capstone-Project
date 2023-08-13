@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/low-poly-fn-f2000-6848de463d5444c0ba0022
 Title: Low-Poly FN F2000
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function FNF2000Model(props) {

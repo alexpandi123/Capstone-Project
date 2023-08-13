@@ -7,7 +7,7 @@ const M1garandPage = () => {
 
     return(
         <div className="main_div">
-            <div className="controls_div_text">
+            <div className="controls_div_box">
                 <span className="controls_text_span">Controls:</span>
             <div className="controls_mouse_items">
                     <span>Left Click:

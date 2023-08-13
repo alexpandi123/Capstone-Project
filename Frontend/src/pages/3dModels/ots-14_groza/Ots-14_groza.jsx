@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/ots-14-groza-402d762908ec4759bf919279d51
 Title: OTs-14 "Groza"
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function OTs14GrozaModel(props) {

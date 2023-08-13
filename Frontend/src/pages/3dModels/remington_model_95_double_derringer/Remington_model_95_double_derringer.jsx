@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/remington-model-95-double-derringer-d573
 Title: Remington Model 95 Double Derringer
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function RemingtonModel95Model(props) {

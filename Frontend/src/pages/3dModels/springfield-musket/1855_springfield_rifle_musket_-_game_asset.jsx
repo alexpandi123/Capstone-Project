@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/1855-springfield-rifle-musket-game-asset
 Title: 1855 Springfield rifle musket - game asset
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function SpringfielMusketdModel(props) {

@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/g11-adcc143d66344019bf695d63299486b3
 Title: G11
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function G11Model(props) {

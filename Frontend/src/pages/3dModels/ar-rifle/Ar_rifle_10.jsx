@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/ar-rifle-10-75b2c308fb8a430fae06415a8fa6
 Title: AR Rifle 10
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Ar10Model(props) {

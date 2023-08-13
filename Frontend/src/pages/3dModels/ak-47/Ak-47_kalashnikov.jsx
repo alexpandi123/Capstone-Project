@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/ak-47-kalashnikov-5d08c2e227d04a0f87cd5a
 Title: AK-47 Kalashnikov
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function AK47Model(props) {

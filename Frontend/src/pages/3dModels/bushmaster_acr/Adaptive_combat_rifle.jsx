@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/adaptive-combat-rifle-a18a8008a299430caa
 Title: Adaptive Combat Rifle
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function ACRModel(props) {

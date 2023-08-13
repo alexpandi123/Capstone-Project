@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/low-poly-cz-805-bren-ffc93e9963ab4566b89
 Title: Low-Poly CZ 805 Bren
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function CZ805BrenModel(props) {

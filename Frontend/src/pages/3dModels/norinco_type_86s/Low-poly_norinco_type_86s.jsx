@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/low-poly-norinco-type-86s-b858399c25eb40
 Title: Low-Poly Norinco Type 86s
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function NorincoModel(props) {

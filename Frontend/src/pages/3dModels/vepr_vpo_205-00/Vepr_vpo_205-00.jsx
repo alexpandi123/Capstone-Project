@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/vepr-vpo-205-00-1c037285a1654db2b7686d57
 Title: VEPR VPO 205-00
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function VEPRModel(props) {

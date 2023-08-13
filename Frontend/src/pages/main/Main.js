@@ -4,17 +4,13 @@ import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import { Link } from "react-router-dom";
 import { Nav } from "react-bootstrap";
-import Spinner from 'react-bootstrap/Spinner';
+import SideBarMenu from "./Sidebar";
+
 
 
 
 const Main = () => {
     const [ weaponInfo, setWeaponInfo ] = useState([]);
-    const [ loading, setLoading ] = useState(true);
-
-    const loadingSpinner = () => {
-        return <Spinner animation="grow" />;
-      };
 
     const mainPageEntries = () => {
         fetch(`http://localhost:3005/weapons/all`)

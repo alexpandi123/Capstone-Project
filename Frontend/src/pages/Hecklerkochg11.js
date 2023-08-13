@@ -5,13 +5,9 @@ import G11Model from "./3dModels/g11/G11";
 
 const Hecklerkochg11Page = () => {
 
-    const onClick = (event) => {
-        console.log("Clicked Hecklerkochg11 Image, Fetching results...");
-    };
-
     return(
         <div className="main_div">
-            <div className="controls_div_text">
+            <div className="controls_div_box">
                 <span className="controls_text_span">Controls:</span>
             <div className="controls_mouse_items">
                     <span>Left Click:

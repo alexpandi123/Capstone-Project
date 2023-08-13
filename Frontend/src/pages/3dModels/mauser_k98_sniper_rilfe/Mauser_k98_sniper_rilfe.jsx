@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/mauser-k98-sniper-rilfe-ce1301fd58a44ab5
 Title: Mauser K98 Sniper rilfe
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function K98Model(props) {

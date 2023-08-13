@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/stg-44-sturmgewehr-fa37bef729e141a6a29bb
 Title: STG - 44 | Sturmgewehr
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function STG44Model(props) {

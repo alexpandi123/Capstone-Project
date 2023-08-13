@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/xm8-rifle-02691b534bb2457f85b0ceb0534f1b
 Title: XM8 Rifle
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function XM8Model(props) {

@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/m1-garand-b25045b6195948fe8c6837c9bd7c7c
 Title: M1 Garand
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function M1GarandModel(props) {

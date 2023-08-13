@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/m1918a2-bar-f3eda10014fb44d4a6912ee9c742
 Title: M1918A2 BAR
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function M1918a2Model(props) {

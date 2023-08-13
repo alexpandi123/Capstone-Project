@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/low-poly-m4-carbine-lvoa-c-ca2f2ab29c104
 Title: Low poly M4 Carbine Lvoa-C
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function LvoacModel(props) {

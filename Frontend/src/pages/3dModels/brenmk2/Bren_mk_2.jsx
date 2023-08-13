@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/bren-mk-2-49cdc2f6f7054083a448fe54b9c071
 Title: Bren Mk 2
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function BrenMk2Model(props) {
