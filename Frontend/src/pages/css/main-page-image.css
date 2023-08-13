@@ -1,0 +1,6 @@
+.image_from_fetch {
+    width: 25rem;
+    height: 15rem;
+    object-fit: contain;
+    border: 1px solid black;
+}

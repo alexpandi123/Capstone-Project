@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import { Link } from "react-router-dom";
-import { Nav } from "react-bootstrap";
-import SideBarMenu from "./Sidebar";
+import { Col, Nav, Row } from "react-bootstrap";
+import '../css/main-page-image.css';
 
 
 
@@ -42,17 +42,21 @@ const Main = () => {
                 </h5>
             </div>
 
-            <div className="d-flex justify-content-center align-items-center flex-wrap sm-6 md-4 lg-4 xl-3 xxl-3 mt-5">
-                {weaponInfo.map(weapon => (
-                    <span key={weapon._id} onClick={(event) => onClick(event, "")}>
-                        <Nav className="me-auto">
-                            <Nav.Link as={Link} to={`${weapon.path}`}>
-                                    <Image style={{width: "34vh", height: "19vh", objectFit: "contain"}} src={`${weapon.image}`} rounded thumbnail/>
-                            </Nav.Link>
-                        </Nav>
-                    </span>
-                ))}
-            </div>
+            <Row>
+                <Col className="sm-6 md-4 lg-3 xl-2">
+                    <div className="mt-5 d-flex justify-content-center align-items-center flex-wrap">
+                        {weaponInfo.map(weapon => (
+                            <div key={weapon._id} onClick={(event) => onClick(event, "")}>
+                                <Nav>
+                                    <Nav.Link as={Link} to={`${weapon.path}`}>
+                                            <Image className="image_from_fetch" src={`${weapon.image}`} rounded />
+                                    </Nav.Link>
+                                </Nav>
+                            </div>
+                        ))}
+                    </div>
+                </Col>
+            </Row>  
         </Container>
     );
 };

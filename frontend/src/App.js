@@ -35,7 +35,7 @@ function App() {
     <>
       <BrowserRouter>
           <div className="App">
-            <Navigation />
+          <Navigation />
               <Routes>
                 <Route path="/" element={<Main />} />
                 <Route path="/add-new-weapon" element={<AddNewWeaponPage />} />

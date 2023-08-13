@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Figtree", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+    background: #ffffff;
+    font-size: 20px;
+}
+
+.sidebar {
+    background: #a8d5e5;
+    width: 17rem;
+}
+
+.menu1 {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #165a72;
+    font-size: 28px;
+}
