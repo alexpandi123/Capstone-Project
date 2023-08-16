@@ -5,6 +5,7 @@ import Image from 'react-bootstrap/Image';
 import { Link } from "react-router-dom";
 import { Col, Nav, Row } from "react-bootstrap";
 import '../css/main-page-image.css';
+import SideBarMenu from "./Sidebar";
 
 
 

@@ -6,7 +6,7 @@
 @media only screen and (max-width: 600px) {
     .controls_div_box {
         position: absolute;
-        top: 9rem;
+        top: 11.5rem;
         left: 1rem;
         font-size: 0.2rem;
     }
@@ -27,7 +27,7 @@
 
     .weapon_inspection_text {
         position: absolute;
-        top: 7.2rem;
+        top: 10.5rem;
         left: 1rem;
         font-size: 0.6rem;
     }
@@ -36,8 +36,8 @@
 @media only screen and (min-width: 600px) {
     .controls_div_box {
         position: absolute;
-        top: 9.3rem;
-        left: 1.7rem;
+        top: 13.5rem;
+        left: 1.2rem;
         font-size: 0.45rem;
     }
 
@@ -59,8 +59,8 @@
     .weapon_inspection_text {
         width: 50rem;
         position: absolute;
-        top: 7.5rem;
-        left: 1.7rem;
+        top: 10.5rem;
+        left: 1.2rem;
         font-size: 1.1rem;
     }
 }
@@ -68,8 +68,8 @@
 @media only screen and (min-width: 768px) {
     .controls_div_box {
         position: absolute;
-        top: 11rem;
-        left: 2rem;
+        top: 14rem;
+        left: 1.5rem;
         font-size: 0.5rem;
     }
 
@@ -89,8 +89,8 @@
 
     .weapon_inspection_text {
         position: absolute;
-        top: 7.5rem;
-        left: 2rem;
+        top: 10.5rem;
+        left: 1.5rem;
         font-size: 2rem;
     }
 }
@@ -98,7 +98,7 @@
 @media only screen and (min-width: 992px) {
     .controls_div_box {
         position: absolute;
-        top: 13rem;
+        top: 15rem;
         left: 3rem;
         font-size: 0.5rem;
     }
@@ -109,8 +109,8 @@
 
     .weapon_inspection_text {
         position: absolute;
-        top: 8rem;
-        left: 3rem;
+        top: 11rem;
+        left: 2rem;
         font-size: 2rem;
     }
 }
@@ -118,28 +118,26 @@
 @media only screen and (min-width: 1200px) {
     .controls_div_box {
         position: absolute;
-        top: 13rem;
+        top: 16rem;
         left: 4rem;
         font-size: 0.8rem;
     }
-
     
-
     .controls_text_span {
         font-size: 1.5rem;
     }
 
     .weapon_inspection_text {
         position: absolute;
-        top: 8rem;
-        left: 4rem;
+        top: 11rem;
+        left: 3rem;
         font-size: 2.5rem;
     }
 }
 
 .weapon_model_box {
     z-index: 2;
-    border: 3px dashed rgb(104, 104, 104);
+    border: 1px dashed rgb(104, 104, 104);
 }
 
 .weapon_inspection_text {
