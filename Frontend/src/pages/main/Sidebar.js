@@ -1,5 +1,6 @@
-import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
+import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import { Routes, Route, Link } from "react-router-dom";
+import { useState } from "react";
 
 import AppsIcon from '@mui/icons-material/Apps';
 import LoginIcon from '@mui/icons-material/Login';
@@ -38,28 +39,37 @@ import Norinco86sPage from "../Norinco86s";
 
 
 const SideBarMenu = () => {
+  const [ isCollapsed, setIsCollapsed ] = useState(false);
+
+  const collapseSidebar = () => {
+    if (isCollapsed === true) {
+      setIsCollapsed(false);
+    } else {
+      setIsCollapsed(true);
+    }
+  };
 
 
     return (
             <div style={{ display: "flex", height: "100vh" }}>
-              <Sidebar className="sidebar">
-                <Menu>
+              <Sidebar onClick={collapseSidebar} collapsed={isCollapsed} className="sidebar">
+                <Menu closeOnClick={true}>
                   <MenuItem component={<Link to={"/"} className='link'/>} icon={<MenuIcon />} className="page_title">
                     <h2>Weapons Wiki</h2>
                   </MenuItem>
-                  <SubMenu className='padding_text_from_sidebar' label="Assault Rifles">
+                  <SubMenu className='padding_text_from_sidebar' icon={<MenuIcon />} label="Assault Rifles">
                     <MenuItem component={<Link to={"/AK47-details"} className='link padding_text_from_sidebar'/>}> Ak-47 </MenuItem>
                     <MenuItem className='padding_text_from_sidebar'> M-16 </MenuItem>
                   </SubMenu>
-                  <SubMenu className='padding_text_from_sidebar' label="Sniper Rifles">
+                  <SubMenu className='padding_text_from_sidebar' icon={<MenuIcon />} label="Sniper Rifles">
                     <MenuItem className='padding_text_from_sidebar'> Ak-47 </MenuItem>
                     <MenuItem className='padding_text_from_sidebar'> M-16 </MenuItem>
                   </SubMenu>
-                  <SubMenu className='padding_text_from_sidebar' label="Shotguns">
+                  <SubMenu className='padding_text_from_sidebar' icon={<MenuIcon />} label="Shotguns">
                     <MenuItem className='padding_text_from_sidebar'> Ak-47 </MenuItem>
                     <MenuItem className='padding_text_from_sidebar'> M-16 </MenuItem>
                   </SubMenu>
-                  <SubMenu className='padding_text_from_sidebar' label="Pistols">
+                  <SubMenu className='padding_text_from_sidebar' icon={<MenuIcon />} label="Pistols">
                     <MenuItem className='padding_text_from_sidebar'> Ak-47 </MenuItem>
                     <MenuItem className='padding_text_from_sidebar'> M-16 </MenuItem>
                   </SubMenu>
