@@ -6,7 +6,7 @@
 @media only screen and (max-width: 600px) {
     .controls_div_box {
         position: absolute;
-        top: 11.5rem;
+        top: 14rem;
         left: 1rem;
         font-size: 0.2rem;
     }
@@ -27,8 +27,8 @@
 
     .weapon_inspection_text {
         position: absolute;
-        top: 10.5rem;
-        left: 1rem;
+        top: 12.8rem;
+        left: 0.5rem;
         font-size: 0.6rem;
     }
 }
@@ -36,7 +36,7 @@
 @media only screen and (min-width: 600px) {
     .controls_div_box {
         position: absolute;
-        top: 13.5rem;
+        top: 14.5rem;
         left: 1.2rem;
         font-size: 0.45rem;
     }
@@ -59,8 +59,8 @@
     .weapon_inspection_text {
         width: 50rem;
         position: absolute;
-        top: 10.5rem;
-        left: 1.2rem;
+        top: 12.5rem;
+        left: 0.5rem;
         font-size: 1.1rem;
     }
 }
@@ -68,7 +68,7 @@
 @media only screen and (min-width: 768px) {
     .controls_div_box {
         position: absolute;
-        top: 14rem;
+        top: 15.5rem;
         left: 1.5rem;
         font-size: 0.5rem;
     }
@@ -89,7 +89,7 @@
 
     .weapon_inspection_text {
         position: absolute;
-        top: 10.5rem;
+        top: 12.5rem;
         left: 1.5rem;
         font-size: 2rem;
     }
@@ -98,7 +98,7 @@
 @media only screen and (min-width: 992px) {
     .controls_div_box {
         position: absolute;
-        top: 15rem;
+        top: 17rem;
         left: 3rem;
         font-size: 0.5rem;
     }
@@ -109,7 +109,7 @@
 
     .weapon_inspection_text {
         position: absolute;
-        top: 11rem;
+        top: 13rem;
         left: 2rem;
         font-size: 2rem;
     }
@@ -118,7 +118,7 @@
 @media only screen and (min-width: 1200px) {
     .controls_div_box {
         position: absolute;
-        top: 16rem;
+        top: 18rem;
         left: 4rem;
         font-size: 0.8rem;
     }
@@ -129,7 +129,7 @@
 
     .weapon_inspection_text {
         position: absolute;
-        top: 11rem;
+        top: 13rem;
         left: 3rem;
         font-size: 2.5rem;
     }
@@ -164,4 +164,8 @@ li {
 
 .controls_mouse_items {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 65px;
 }

@@ -9,6 +9,7 @@ body {
 
 .text_from_sidebar {
     line-height: 31px;
+    z-index: 5;
 }
 
 .sidebar {
