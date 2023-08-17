@@ -1,1 +1,1 @@
-export const RESERVATIONS_PAGE_SIZE = 8;
+export const RESERVATIONS_PAGE_SIZE = 9;

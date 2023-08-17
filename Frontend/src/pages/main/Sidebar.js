@@ -1,15 +1,20 @@
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import { Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
+import * as React from 'react';
 
-import AppsIcon from '@mui/icons-material/Apps';
 import LoginIcon from '@mui/icons-material/Login';
-import MenuIcon from '@mui/icons-material/Menu';
 import AddIcon from '@mui/icons-material/Add';
+import { FiChevronsLeft, FiChevronsRight } from "react-icons/fi/";
+import { GiAk47 } from "react-icons/gi";
+import { GiCrosshair } from "react-icons/gi";
+import { GiSawedOffShotgun } from "react-icons/gi";
+import { GiGlock } from "react-icons/gi";
+import { GiHouse } from "react-icons/gi";
+import { GiStack } from "react-icons/gi";
 
 import "../css/sidebar.css"
 
-import * as React from 'react';
 import Main from './Main';
 import AK47Page from "../AK-47";
 import M16Page from "../M-16";
@@ -36,6 +41,7 @@ import Vepr12Page from "../Vepr12";
 import Xm29oicwPage from "../Xm29oicw";
 import Xm8Page from "../Xm8";
 import Norinco86sPage from "../Norinco86s";
+import AllWeaponsPage from "../AllWeapons";
 
 
 const SideBarMenu = () => {
@@ -49,37 +55,61 @@ const SideBarMenu = () => {
     }
   };
 
-
     return (
-            <div style={{ display: "flex", height: "100vh" }}>
-              <Sidebar onClick={collapseSidebar} collapsed={isCollapsed} className="sidebar">
-                <Menu closeOnClick={true}>
-                  <MenuItem component={<Link to={"/"} className='link'/>} icon={<MenuIcon />} className="page_title">
-                    <h2>Weapons Wiki</h2>
-                  </MenuItem>
-                  <SubMenu className='padding_text_from_sidebar' icon={<MenuIcon />} label="Assault Rifles">
-                    <MenuItem component={<Link to={"/AK47-details"} className='link padding_text_from_sidebar'/>}> Ak-47 </MenuItem>
-                    <MenuItem className='padding_text_from_sidebar'> M-16 </MenuItem>
-                  </SubMenu>
-                  <SubMenu className='padding_text_from_sidebar' icon={<MenuIcon />} label="Sniper Rifles">
-                    <MenuItem className='padding_text_from_sidebar'> Ak-47 </MenuItem>
-                    <MenuItem className='padding_text_from_sidebar'> M-16 </MenuItem>
-                  </SubMenu>
-                  <SubMenu className='padding_text_from_sidebar' icon={<MenuIcon />} label="Shotguns">
-                    <MenuItem className='padding_text_from_sidebar'> Ak-47 </MenuItem>
-                    <MenuItem className='padding_text_from_sidebar'> M-16 </MenuItem>
-                  </SubMenu>
-                  <SubMenu className='padding_text_from_sidebar' icon={<MenuIcon />} label="Pistols">
-                    <MenuItem className='padding_text_from_sidebar'> Ak-47 </MenuItem>
-                    <MenuItem className='padding_text_from_sidebar'> M-16 </MenuItem>
-                  </SubMenu>
-                  <MenuItem className='padding_text_from_sidebar' icon={<AppsIcon />}>All Weapons</MenuItem>
-                  <MenuItem component={<Link to={"/add-new-weapon"} className='link padding_text_from_sidebar'/>} icon={<AddIcon />}>Add A Weapon</MenuItem>
-                  <MenuItem className='padding_text_from_sidebar' icon={<LoginIcon />} > LOG IN </MenuItem>
-                </Menu>
+            <div style={{ display: "flex", height: "100vh", position:"relative" }}>
+              <Sidebar collapsed={isCollapsed} width="300px" className="sidebar">
+                  <Menu>
+                    {isCollapsed ? (
+                        <MenuItem icon={<FiChevronsRight />} onClick={collapseSidebar}> </MenuItem>
+                      ) : (
+                        <MenuItem icon={<FiChevronsLeft />} onClick={collapseSidebar} >
+                          <div className="page_title">
+                            Weapons Wiki
+                          </div>
+                        </MenuItem>
+                      )}
+                  </Menu>
+                  <hr />
+                  <Menu>
+                    <MenuItem icon={<GiHouse />} component={<Link to={"/"} className='link text_from_sidebar' />}> Main Page </MenuItem>
+                    <SubMenu className='text_from_sidebar' icon={<GiAk47 />} label="Assault Rifles">
+                      <MenuItem component={<Link to={"/AK47-details"} className='link text_from_sidebar'/>} > AK-47 </MenuItem>
+                      <MenuItem component={<Link to={"/M16-details"} className='link text_from_sidebar'/>} > M-16 </MenuItem>
+                      <MenuItem component={<Link to={"/MG42-details"} className='link text_from_sidebar'/>}> MG-42 </MenuItem>
+                      <MenuItem component={<Link to={"/Brengun-details"} className='link text_from_sidebar'/>}> Bren Gun </MenuItem>
+                      <MenuItem component={<Link to={"/M1918browning-details"} className='link text_from_sidebar'/>}> M1918 Browning </MenuItem>
+                      <MenuItem component={<Link to={"/M1garand-details"} className='link text_from_sidebar'/>}> M1 Garand </MenuItem>
+                      <MenuItem component={<Link to={"/Spencerrifle-details"} className='link text_from_sidebar'/>}> Spencer repeating rifle </MenuItem>
+                      <MenuItem component={<Link to={"/9a91-details"} className='link text_from_sidebar'/>}> 9A-91 </MenuItem>
+                      <MenuItem component={<Link to={"/Ak12-details"} className='link text_from_sidebar'/>}> AK-12 </MenuItem>
+                      <MenuItem component={<Link to={"/Cz805bren-details"} className='link text_from_sidebar'/>}> CZ 805 BREN </MenuItem>
+                      <MenuItem component={<Link to={"/Fnf2000-details"} className='link text_from_sidebar'/>}> FN F2000 </MenuItem>
+                      <MenuItem component={<Link to={"/Hecklerkochg11-details"} className='link text_from_sidebar'/>}> Heckler & Koch G11 </MenuItem>
+                      <MenuItem component={<Link to={"/Lvoac-details"} className='link text_from_sidebar'/>}> LVOA-C </MenuItem>
+                      <MenuItem component={<Link to={"/Ots14groza-details"} className='link text_from_sidebar'/>}> OTs-14 Groza </MenuItem>
+                      <MenuItem component={<Link to={"/Stg44-details"} className='link text_from_sidebar'/>}> StG 44 </MenuItem>
+                      <MenuItem component={<Link to={"/Xm29oicw-details"} className='link text_from_sidebar'/>}> XM29 OICW </MenuItem>
+                      <MenuItem component={<Link to={"/Xm8-details"} className='link text_from_sidebar'/>}> XM8 </MenuItem>
+                      <MenuItem component={<Link to={"/Norinco86s-details"} className='link text_from_sidebar'/>}> Norinco Type 86S </MenuItem>
+                    </SubMenu>
+                    <SubMenu className='text_from_sidebar' icon={<GiCrosshair />} label="Sniper Rifles">
+                      <MenuItem component={<Link to={"/Springfield1855-details"} className='link text_from_sidebar'/>}> Springfield Model 1855 </MenuItem>
+                      <MenuItem component={<Link to={"/Karabiner98k-details"} className='link text_from_sidebar'/>}> Kar98K </MenuItem>
+                    </SubMenu>
+                    <SubMenu className='text_from_sidebar' icon={<GiSawedOffShotgun />} label="Shotguns">
+                      <MenuItem component={<Link to={"/Vepr12-details"} className='link text_from_sidebar'/>}> Vepr-12 </MenuItem>
+                    </SubMenu>
+                    <SubMenu className='text_from_sidebar' icon={<GiGlock />} label="Pistols">
+                      <MenuItem component={<Link to={"/Remington95-details"} className='link text_from_sidebar'/>}> Derringer </MenuItem>
+                    </SubMenu>
+                    <MenuItem component={<Link to={"/all-weapons"} className='link text_from_sidebar'/>} icon={<GiStack />}>All Weapons</MenuItem>
+                    <MenuItem component={<Link to={"/add-new-weapon"} className='link text_from_sidebar'/>} icon={<AddIcon />}>Add A Weapon</MenuItem>
+                    <MenuItem component={<Link to={"/AK47-details"} className='link text_from_sidebar'/>} icon={<LoginIcon />} > LOG IN </MenuItem>
+                  </Menu>
               </Sidebar>
               <Routes>
                 <Route path="/" element={<Main />} />
+                <Route path="/all-weapons" element={<AllWeaponsPage />} />
                 <Route path="/add-new-weapon" element={<AddNewWeaponPage />} />
                 <Route path="/AK47-details" element={<AK47Page />}/>
                 <Route path="/M16-details" element={<M16Page />}/>
@@ -111,9 +141,3 @@ const SideBarMenu = () => {
 };
 
 export default SideBarMenu;
-
-
-// to remove bootstrap-sidebar-menu
-
-
-//https://blog.openreplay.com/simple-sidebars-with-react-pro-sidebar-and-material-ui/

@@ -3,23 +3,36 @@ import { useEffect, useState } from "react";
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import { Link } from "react-router-dom";
-import { Col, Nav, Row } from "react-bootstrap";
-import '../css/main-page-image.css';
+import { Col, Nav, Pagination, Row } from "react-bootstrap";
+import './css/main-page-image.css';
 
 
 
 
-const Main = () => {
+const AllWeaponsPage = () => {
     const [ weaponInfo, setWeaponInfo ] = useState([]);
 
     const mainPageEntries = () => {
-        fetch(`http://localhost:3005/weapons/all`)
+        fetch(`http://localhost:3005/weapons/weapon-page?page=1`)
         .then(response => response.json())
         .then(data => {
-            data.sort(() => Math.random() - 0.5);
-            const slicedData = data.slice(0,8);
-            console.log(slicedData);
-            setWeaponInfo(slicedData);
+            setWeaponInfo(data);
+        })
+    };
+
+    const secondPageEntries = () => {
+        fetch(`http://localhost:3005/weapons/weapon-page?page=2`)
+        .then(response => response.json())
+        .then(data => {
+            setWeaponInfo(data);
+        })
+    };
+
+    const thirdPageEntries = () => {
+        fetch(`http://localhost:3005/weapons/weapon-page?page=3`)
+        .then(response => response.json())
+        .then(data => {
+            setWeaponInfo(data);
         })
     };
 
@@ -30,20 +43,16 @@ const Main = () => {
        console.log(`Fetching results...`);
     };
 
-
     return(
         <Container>
             <div>
-                <h1 className="mt-5 text-center ">
-                    Welcome to the Weapons Wiki!
-                </h1>
-                <h6 className=" text-center ">
-                    Click on a weapon below for more information about it..
-                </h6>
+                <h4 className="mt-5 text-center ">
+                    All Weapons From Weapons Wiki:
+                </h4>
             </div>
 
             <Row>
-                <Col className="mt-5 sm-6 md-4 lg-3 xl-2">
+                <Col className="sm-6 md-4 lg-3 xl-2">
                     <div className="mt-5 d-flex justify-content-center align-items-center flex-wrap">
                         {weaponInfo.map(weapon => (
                             <div key={weapon._id} onClick={(event) => onClick(event, "")}>
@@ -57,8 +66,15 @@ const Main = () => {
                     </div>
                 </Col>
             </Row>  
+
+            <Pagination className="d-flex justify-content-center align-items-center mt-5">  
+                <Pagination.Item onClick={mainPageEntries} >1</Pagination.Item>  
+                <Pagination.Item onClick={secondPageEntries} >2</Pagination.Item>  
+                <Pagination.Item onClick={thirdPageEntries} >3</Pagination.Item>   
+            </Pagination>
+
         </Container>
     );
 };
 
-export default Main;
+export default AllWeaponsPage;
