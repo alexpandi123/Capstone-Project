@@ -59,7 +59,7 @@ const SideBarMenu = () => {
   };
 
     return (
-            <div style={{ display: "flex", height: "100vh", position:"relative" }}>
+            <div style={{ display: "flex", height: "120vh" }}>
               <Sidebar collapsed={isCollapsed} width="300px" className="sidebar">
                   <Menu>
                     {isCollapsed ? (
