@@ -1,12 +1,12 @@
 import React from "react";
-import { useEffect, useState } from "react";
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
+
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Col, Nav, Pagination, Row } from "react-bootstrap";
+
 import './css/main-page-image.css';
-
-
 
 
 const AllWeaponsPage = () => {
@@ -42,6 +42,7 @@ const AllWeaponsPage = () => {
     const onClick = (event) => {
        console.log(`Fetching results...`);
     };
+
 
     return(
         <Container>

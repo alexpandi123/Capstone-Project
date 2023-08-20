@@ -6,6 +6,7 @@ import { initDB } from "./config/database.js";
 import { loggingMiddleware } from "./Middlewares/logging.js";
 
 import { router as weaponRouter } from "./Routes/weapon.js";
+import { router as userRouter} from "./Routes/user.js"
 
 
 initDB();
@@ -27,6 +28,7 @@ app.get('/', (request, response, next) => {
 //Routes
 
 app.use("/weapons", weaponRouter);
+app.use("/users", userRouter);
 
 //
 

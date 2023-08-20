@@ -40,11 +40,7 @@ router.get("/weapon-page", async (request, response) => {
     .skip((page - 1) * RESERVATIONS_PAGE_SIZE)
     .limit(RESERVATIONS_PAGE_SIZE);
 
-    if(weapons.length > 1) {
-        console.log(`Fetched ${weapons.length} weapons`);
-    } else {
-        console.log(`Fetched ${weapons.length} weapon`);
-    }
+    (weapons.length > 1) ? (console.log(`Fetched ${weapons.length} weapons`)) : (console.log(`Fetched ${weapons.length} weapon`)) ;
 
     response.send(JSON.stringify(weapons));
 });

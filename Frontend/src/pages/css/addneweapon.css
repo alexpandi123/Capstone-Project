@@ -1,0 +1,542 @@
+.pos_rel {
+    position: relative;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /* Lines */
+    .span_decoration_circle_left {
+        height: 75px;
+        width: 75px;
+        position: absolute;
+        top: -6.35rem;
+        left: 47rem;
+        border: solid #e1a8fc;
+        border-bottom: none;
+        transform: rotate(270deg);
+        border-radius: 50%/50px 50px 0 0;
+    }
+    .span_decoration_circle_right {
+        height: 75px;
+        width: 75px;
+        position: absolute;
+        top: -6.35rem;
+        right: 47rem;
+        border: solid #e1a8fc;
+        border-bottom: none;
+        transform: rotate(90deg);
+        border-radius: 50%/50px 50px 0 0;
+    }
+    
+    /* Images */
+    .span_decoration_image_one {
+        width: 350px;
+        height: 150px;
+        position: absolute;
+        top: 5rem;
+        right: 30rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/AK-47_type_II_noBG.png/1280px-AK-47_type_II_noBG.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(30deg);
+    }
+    .span_decoration_image_two {
+        width: 350px;
+        height: 150px;
+        position: absolute;
+        top: 5rem;
+        left: 30rem;
+        background-image: url(https://cdn.britannica.com/08/130708-004-FA77063E/assault-rifle-M16A1-models-military-M16-Colts.jpg?s=1500x700&q=85);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(-30deg);
+    }
+    .span_decoration_image_three {
+        width: 350px;
+        height: 150px;
+        position: absolute;
+        top: 16rem;
+        right: 30rem;
+        background-image: url(https://photo.weaponsystems.net/image/s-carousel/n-fa_ar_m1garand_p02.jpg/--/img/ws/fa_ar_m1garand_p02.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(30deg);
+    }
+    .span_decoration_image_four {
+        width: 350px;
+        height: 150px;
+        position: absolute;
+        top: 16rem;
+        left: 30rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/ad/Bushmaster_ACR.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(-30deg);
+    }
+    .span_decoration_image_five {
+        width: 350px;
+        height: 150px;
+        position: absolute;
+        top: 27rem;
+        left: 30rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/AK-12.png/2560px-AK-12.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(-30deg);
+    }
+    .span_decoration_image_six {
+        width: 350px;
+        height: 150px;
+        position: absolute;
+        top: 27rem;
+        right: 30rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/MG42_Sideview_2.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(30deg);
+    }
+}
+/* Small devices (portrait tablets and large phones, 720px and up) */
+@media only screen and (min-width: 720px) {
+    /* Lines */
+    .span_decoration_circle_left {
+        height: 35px;
+        width: 35px;
+        position: absolute;
+        top: -4.5rem;
+        left: 9.3rem;
+        border: solid #e1a8fc;
+        border-bottom: none;
+        transform: rotate(270deg);
+        border-radius: 50%/25px 25px 0 0;
+    }
+    .span_decoration_circle_right {
+        height: 35px;
+        width: 35px;
+        position: absolute;
+        top: -4.5rem;
+        right: 9.3rem;
+        border: solid #e1a8fc;
+        border-bottom: none;
+        transform: rotate(90deg);
+        border-radius: 50%/25px 25px 0 0;
+    }
+    
+    /* Images */
+    .span_decoration_image_one {
+        width: 75px;
+        height: 50px;
+        position: absolute;
+        top: 0.1rem;
+        right: 10rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/AK-47_type_II_noBG.png/1280px-AK-47_type_II_noBG.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(30deg);
+    }
+    .span_decoration_image_two {
+        width: 75px;
+        height: 50px;
+        position: absolute;
+        top: 0.1rem;
+        left: 10rem;
+        background-image: url(https://cdn.britannica.com/08/130708-004-FA77063E/assault-rifle-M16A1-models-military-M16-Colts.jpg?s=1500x700&q=85);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(-30deg);
+    }
+    .span_decoration_image_three {
+        width: 75px;
+        height: 50px;
+        position: absolute;
+        top: 5rem;
+        right: 10rem;
+        background-image: url(https://photo.weaponsystems.net/image/s-carousel/n-fa_ar_m1garand_p02.jpg/--/img/ws/fa_ar_m1garand_p02.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(30deg);
+    }
+    .span_decoration_image_four {
+        width: 75px;
+        height: 50px;
+        position: absolute;
+        top: 5rem;
+        left: 10rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/ad/Bushmaster_ACR.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(-30deg);
+    }
+    .span_decoration_image_five {
+        width: 75px;
+        height: 50px;
+        position: absolute;
+        top: 10rem;
+        left: 10rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/AK-12.png/2560px-AK-12.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(-30deg);
+    }
+    .span_decoration_image_six {
+        width: 75px;
+        height: 50px;
+        position: absolute;
+        top: 10rem;
+        right: 10rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/MG42_Sideview_2.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(30deg);
+    }
+
+    /* Form */
+    .form_sizes {
+        transform: scale(0.5);
+        margin-top: -13rem;
+    }
+
+    .h3_size {
+        font-size: small;
+    }
+}
+/* Medium devices (landscape tablets, 995px and up) */
+@media only screen and (min-width: 995px) {
+    /* Lines */
+    .span_decoration_circle_left {
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        top: -5rem;
+        left: 12rem;
+        border: solid #e1a8fc;
+        border-bottom: none;
+        transform: rotate(270deg);
+        border-radius: 50%/25px 25px 0 0;
+    }
+    .span_decoration_circle_right {
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        top: -5rem;
+        right: 12rem;
+        border: solid #e1a8fc;
+        border-bottom: none;
+        transform: rotate(90deg);
+        border-radius: 50%/25px 25px 0 0;
+    }
+    
+    /* Images */
+    .span_decoration_image_one {
+        width: 150px;
+        height: 75px;
+        position: absolute;
+        top: 1rem;
+        right: 30rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/AK-47_type_II_noBG.png/1280px-AK-47_type_II_noBG.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(30deg);
+    }
+    .span_decoration_image_two {
+        width: 150px;
+        height: 75px;
+        position: absolute;
+        top: 1rem;
+        left: 30rem;
+        background-image: url(https://cdn.britannica.com/08/130708-004-FA77063E/assault-rifle-M16A1-models-military-M16-Colts.jpg?s=1500x700&q=85);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(-30deg);
+    }
+    .span_decoration_image_three {
+        width: 150px;
+        height: 75px;
+        position: absolute;
+        top: 7rem;
+        right: 30rem;
+        background-image: url(https://photo.weaponsystems.net/image/s-carousel/n-fa_ar_m1garand_p02.jpg/--/img/ws/fa_ar_m1garand_p02.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(30deg);
+    }
+    .span_decoration_image_four {
+        width: 150px;
+        height: 75px;
+        position: absolute;
+        top: 7rem;
+        left: 30rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/ad/Bushmaster_ACR.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(-30deg);
+    }
+    .span_decoration_image_five {
+        width: 150px;
+        height: 75px;
+        position: absolute;
+        top: 14rem;
+        left: 30rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/AK-12.png/2560px-AK-12.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(-30deg);
+    }
+    .span_decoration_image_six {
+        width: 150px;
+        height: 75px;
+        position: absolute;
+        top: 14rem;
+        right: 30rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/MG42_Sideview_2.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(30deg);
+    }
+
+    /* Form */
+    .form_sizes {
+        transform: scale(0.6);
+        margin-top: -10rem;
+    }
+
+    .h3_size {
+        font-size: small;
+    }
+}
+/* Large devices (laptops/desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    /* Lines */
+    .span_decoration_circle_left {
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        top: -5.3rem;
+        left: 22rem;
+        border: solid #e1a8fc;
+        border-bottom: none;
+        transform: rotate(270deg);
+        border-radius: 50%/25px 25px 0 0;
+    }
+    .span_decoration_circle_right {
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        top: -5.3rem;
+        right: 22rem;
+        border: solid #e1a8fc;
+        border-bottom: none;
+        transform: rotate(90deg);
+        border-radius: 50%/25px 25px 0 0;
+    }
+    
+    /* Images */
+    .span_decoration_image_one {
+        width: 250px;
+        height: 100px;
+        position: absolute;
+        top: 3rem;
+        right: 15rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/AK-47_type_II_noBG.png/1280px-AK-47_type_II_noBG.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(30deg);
+    }
+    .span_decoration_image_two {
+        width: 250px;
+        height: 100px;
+        position: absolute;
+        top: 3rem;
+        left: 15rem;
+        background-image: url(https://cdn.britannica.com/08/130708-004-FA77063E/assault-rifle-M16A1-models-military-M16-Colts.jpg?s=1500x700&q=85);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(-30deg);
+    }
+    .span_decoration_image_three {
+        width: 250px;
+        height: 100px;
+        position: absolute;
+        top: 13rem;
+        right: 15rem;
+        background-image: url(https://photo.weaponsystems.net/image/s-carousel/n-fa_ar_m1garand_p02.jpg/--/img/ws/fa_ar_m1garand_p02.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(30deg);
+    }
+    .span_decoration_image_four {
+        width: 250px;
+        height: 100px;
+        position: absolute;
+        top: 13rem;
+        left: 15rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/ad/Bushmaster_ACR.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(-30deg);
+    }
+    .span_decoration_image_five {
+        width: 250px;
+        height: 100px;
+        position: absolute;
+        top: 24rem;
+        left: 15rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/AK-12.png/2560px-AK-12.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(-30deg);
+    }
+    .span_decoration_image_six {
+        width: 250px;
+        height: 100px;
+        position: absolute;
+        top: 24rem;
+        right: 15rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/MG42_Sideview_2.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(30deg);
+    }
+
+    /* Form */
+    .form_sizes {
+        transform: scale(0.8);
+        margin-top: -3rem;
+    }
+    .h3_size {
+        font-size: 1.2rem;
+    }
+}
+/* Extra large devices (large laptops and desktops, 1700px and up) */
+@media only screen and (min-width: 1700px) {
+    /* Lines */
+    .span_decoration_circle_left {
+        height: 75px;
+        width: 75px;
+        position: absolute;
+        top: -6.35rem;
+        left: 23rem;
+        border: solid #e1a8fc;
+        border-bottom: none;
+        transform: rotate(270deg);
+        border-radius: 50%/50px 50px 0 0;
+    }
+    .span_decoration_circle_right {
+        height: 75px;
+        width: 75px;
+        position: absolute;
+        top: -6.35rem;
+        right: 23rem;
+        border: solid #e1a8fc;
+        border-bottom: none;
+        transform: rotate(90deg);
+        border-radius: 50%/50px 50px 0 0;
+    }
+    
+    /* Images */
+    .span_decoration_image_one {
+        width: 350px;
+        height: 150px;
+        position: absolute;
+        top: 5rem;
+        right: 15rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/AK-47_type_II_noBG.png/1280px-AK-47_type_II_noBG.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(30deg);
+    }
+    .span_decoration_image_two {
+        width: 350px;
+        height: 150px;
+        position: absolute;
+        top: 5rem;
+        left: 15rem;
+        background-image: url(https://cdn.britannica.com/08/130708-004-FA77063E/assault-rifle-M16A1-models-military-M16-Colts.jpg?s=1500x700&q=85);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(-30deg);
+    }
+    .span_decoration_image_three {
+        width: 350px;
+        height: 150px;
+        position: absolute;
+        top: 16rem;
+        right: 15rem;
+        background-image: url(https://photo.weaponsystems.net/image/s-carousel/n-fa_ar_m1garand_p02.jpg/--/img/ws/fa_ar_m1garand_p02.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(30deg);
+    }
+    .span_decoration_image_four {
+        width: 350px;
+        height: 150px;
+        position: absolute;
+        top: 16rem;
+        left: 15rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/ad/Bushmaster_ACR.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(-30deg);
+    }
+    .span_decoration_image_five {
+        width: 350px;
+        height: 150px;
+        position: absolute;
+        top: 27rem;
+        left: 15rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/AK-12.png/2560px-AK-12.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(-30deg);
+    }
+    .span_decoration_image_six {
+        width: 350px;
+        height: 150px;
+        position: absolute;
+        top: 27rem;
+        right: 15rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/MG42_Sideview_2.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(30deg);
+    }
+
+    /* Form */
+    .form_sizes {
+        transform: scale(1);
+        margin-top: 3.5rem;
+    }
+    .h3_size {
+        font-size: 1.5rem;
+    }
+}

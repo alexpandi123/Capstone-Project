@@ -70,7 +70,7 @@ const SideBarMenu = () => {
                       )}
                   </Menu>
                   <hr />
-                  <Menu>
+                  <Menu closeOnClick="true">
                     <MenuItem icon={<GiHouse />} component={<Link to={"/"} className='link text_from_sidebar' />}> Main Page </MenuItem>
                     <SubMenu className='text_from_sidebar' icon={<GiAk47 />} label="Assault Rifles">
                       <MenuItem component={<Link to={"/AK47-details"} className='link text_from_sidebar'/>} > AK-47 </MenuItem>
