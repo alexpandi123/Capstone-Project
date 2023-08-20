@@ -5,6 +5,7 @@ import * as React from 'react';
 
 import LoginIcon from '@mui/icons-material/Login';
 import AddIcon from '@mui/icons-material/Add';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
 import { FiChevronsLeft, FiChevronsRight } from "react-icons/fi/";
 import { GiAk47 } from "react-icons/gi";
 import { GiCrosshair } from "react-icons/gi";
@@ -42,6 +43,8 @@ import Xm29oicwPage from "../Xm29oicw";
 import Xm8Page from "../Xm8";
 import Norinco86sPage from "../Norinco86s";
 import AllWeaponsPage from "../AllWeapons";
+import UserRegisterPage from "./UserRegisterPage";
+import UserLoginPage from "./UserLoginPage";
 
 
 const SideBarMenu = () => {
@@ -104,11 +107,15 @@ const SideBarMenu = () => {
                     </SubMenu>
                     <MenuItem component={<Link to={"/all-weapons"} className='link text_from_sidebar'/>} icon={<GiStack />}>All Weapons</MenuItem>
                     <MenuItem component={<Link to={"/add-new-weapon"} className='link text_from_sidebar'/>} icon={<AddIcon />}>Add A Weapon</MenuItem>
-                    <MenuItem component={<Link to={"/AK47-details"} className='link text_from_sidebar'/>} icon={<LoginIcon />} > LOG IN </MenuItem>
+                    <hr />
+                    <MenuItem component={<Link to={"/new-user-page"} className='link text_from_sidebar'/>} icon={<HowToRegIcon />} > Register </MenuItem>
+                    <MenuItem component={<Link to={"/user-login-page"} className='link text_from_sidebar'/>} icon={<LoginIcon />} > LOG IN </MenuItem>
                   </Menu>
               </Sidebar>
               <Routes>
                 <Route path="/" element={<Main />} />
+                <Route path="/new-user-page" element={<UserRegisterPage />} />
+                <Route path="/user-login-page" element={<UserLoginPage />} />
                 <Route path="/all-weapons" element={<AllWeaponsPage />} />
                 <Route path="/add-new-weapon" element={<AddNewWeaponPage />} />
                 <Route path="/AK47-details" element={<AK47Page />}/>

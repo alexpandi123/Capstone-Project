@@ -47,7 +47,7 @@ router.put("/:userId", async (request, response) => {
 
 //DELETE
 router.delete("/:userId", async (request, response) => {
-    const user = await user.deleteMany({ _id: request.params.userId});
+    const user = await User.deleteMany({ _id: request.params.userId});
 
     response.send(`Deleted ${user.deletedCount} entry`);
 });
