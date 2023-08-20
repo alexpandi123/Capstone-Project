@@ -2,9 +2,24 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import W9a91Model from "./3dModels/9a-91/9a-91";
 import './css/weapon-modifications.css'
+import { useEffect, useState } from "react";
+
+import "./css/weapons-page.css"
 
 
 const W9a91Page = () => {
+    const [ weaponInfo, setWeaponInfo ] = useState([]);
+
+    const fetch9a91Data = () => {
+        fetch("http://localhost:3005/weapons/64c03c8b6f4695cee7a644cd")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            setWeaponInfo(data);
+        })
+    };
+
+    useEffect(() => { fetch9a91Data() }, []);
 
     return(
         <div className="main_div">
@@ -44,6 +59,35 @@ const W9a91Page = () => {
                         <W9a91Model />
                     <OrbitControls />
                 </Canvas>
+                <div>
+                        {weaponInfo.map(weapon => (
+                            <div key={weapon._id}>
+                                <div className="d-flex justify-content-around mt-5">
+                                     <div>
+                                        <span className="category_title_span">Type</span> 
+                                        <span className="category_content_span">{weapon.type}</span>
+                                    </div>
+                                    <div>
+                                        <span className="category_title_span">Design Year</span> 
+                                        <span className="category_content_span">{weapon.designYear}</span>
+                                    </div>
+                                    <div>
+                                        <span className="category_title_span">Effective Firing Range</span> 
+                                        <span className="category_content_span">{weapon.effectiveFiringRange}</span>
+                                    </div>
+                                    <div>
+                                        <span className="category_title_span">Rate of Fire</span> 
+                                        <span className="category_content_span">{weapon.rateOfFire}*</span>
+                                    </div>
+                                </div>
+                                <div className="description_div w-100">
+                                    <span className="category_title_span_description">Description:</span> 
+                                    <div className="category_content_span_description">{weapon.description}</div>
+                                </div>
+                                <div>*RPM = Rounds Per Minute</div>
+                            </div>
+                        ))}
+                </div>
             </div>
         </div>
     )
