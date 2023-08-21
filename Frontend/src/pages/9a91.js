@@ -1,19 +1,23 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import W9a91Model from "./3dModels/9a-91/9a-91";
-import './css/weapon-modifications.css'
 import { useEffect, useState } from "react";
 
+import W9a91Model from "./3dModels/9a-91/9a-91";
+
+import './css/weapon-modifications.css'
 import "./css/weapons-page.css"
 
 
 const W9a91Page = () => {
     const [ weaponInfo, setWeaponInfo ] = useState([]);
+    const [ isLoading, setIsLoading ] = useState(false);
 
     const fetch9a91Data = () => {
+        setIsLoading(true)
         fetch("http://localhost:3005/weapons/64c03c8b6f4695cee7a644cd")
         .then(response => response.json())
         .then(data => {
+            setIsLoading(false)
             console.log(data);
             setWeaponInfo(data);
         })
@@ -50,9 +54,10 @@ const W9a91Page = () => {
             </div>
             </div>
             <span className="weapon_inspection_text">Weapon Inspection</span>
-            <h1 className="text-center mt-4">9A91</h1>
-            <h6 className="text-center mb-5">also known as "KBP 9A91"</h6>
+            <h1 className="title_text text-center mt-4">9A91</h1>
+            <h6 className="subtitle_text text-center mb-5">also known as "KBP 9A91"</h6>
             <div className="weapon_model_box" style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+            {isLoading && <div className="spinner-border" style={{width: "5rem", height: "5rem"}} role="status"> <span className="sr-only"></span></div>}
                 <Canvas>
                     <directionalLight position={[1,1,1]} intensity={30} />
                     <directionalLight position={[-1,-1,-1]} intensity={60} />
@@ -81,7 +86,7 @@ const W9a91Page = () => {
                                     </div>
                                 </div>
                                 <div className="description_div w-100">
-                                    <span className="category_title_span_description">Description:</span> 
+                                    <span className="category_title_span_description">Description</span> 
                                     <div className="category_content_span_description">{weapon.description}</div>
                                 </div>
                                 <div>*RPM = Rounds Per Minute</div>

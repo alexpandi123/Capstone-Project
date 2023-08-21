@@ -1,5 +1,6 @@
 .main_div {
     position: relative;
+    background-color: rgb(255, 255, 246);
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -145,6 +146,7 @@
     cursor: default;
     z-index: 3;
     text-decoration: underline;
+    color: #3e0c55;
 }
 
 .controls_div_box {
@@ -168,4 +170,18 @@ li {
 
 h1 {
     font-size: 65px;
+}
+
+.title_text {
+    color: #7a19a7;
+}
+
+.subtitle_text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.spinner-border {
+    position: absolute;
+    top: 25rem;
+    left: 55rem;
 }

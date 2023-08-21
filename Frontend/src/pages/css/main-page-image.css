@@ -4,3 +4,11 @@
     object-fit: contain;
     border: 1px solid black;
 }
+
+.title_text {
+    color: #7a19a7;
+}
+
+.subtitle_text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

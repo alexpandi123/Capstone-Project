@@ -1,9 +1,11 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import Container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
 import { Link } from "react-router-dom";
 import { Col, Nav, Row } from "react-bootstrap";
+
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+
 import '../css/main-page-image.css';
 
 
@@ -37,10 +39,10 @@ const Main = () => {
     return(
         <Container>
             <div>
-                <h1 className="mt-5 text-center ">
+                <h1 className="mt-5 text-center title_text">
                     Welcome to the Weapons Wiki!
                 </h1>
-                <h6 className=" text-center ">
+                <h6 className=" text-center subtitle_text">
                     Click on a weapon below for more information about it..
                 </h6>
             </div>

@@ -47,9 +47,9 @@ const AllWeaponsPage = () => {
     return(
         <Container>
             <div>
-                <h4 className="mt-5 text-center ">
+                <h3 className="mt-5 text-center title_text">
                     All Weapons From Weapons Wiki:
-                </h4>
+                </h3>
             </div>
 
             <Row>

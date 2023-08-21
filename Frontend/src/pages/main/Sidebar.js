@@ -48,13 +48,13 @@ import UserLoginPage from "./UserLoginPage";
 
 
 const SideBarMenu = () => {
-  const [ isCollapsed, setIsCollapsed ] = useState(false);
+  const [ isCollapsed, setIsCollapsed ] = useState(true);
 
   const collapseSidebar = () => {
-    if (isCollapsed === true) {
-      setIsCollapsed(false);
-    } else {
+    if (isCollapsed === false) {
       setIsCollapsed(true);
+    } else {
+      setIsCollapsed(false);
     }
   };
 
@@ -82,7 +82,7 @@ const SideBarMenu = () => {
                       <MenuItem component={<Link to={"/Brengun-details"} className='link text_from_sidebar'/>}> Bren Gun </MenuItem>
                       <MenuItem component={<Link to={"/M1918browning-details"} className='link text_from_sidebar'/>}> M1918 Browning </MenuItem>
                       <MenuItem component={<Link to={"/M1garand-details"} className='link text_from_sidebar'/>}> M1 Garand </MenuItem>
-                      <MenuItem component={<Link to={"/Spencerrifle-details"} className='link text_from_sidebar'/>}> Spencer repeating rifle </MenuItem>
+                      <MenuItem component={<Link to={"/Spencerrifle-details"} className='link text_from_sidebar'/>}>Spencer M1865 </MenuItem>
                       <MenuItem component={<Link to={"/9a91-details"} className='link text_from_sidebar'/>}> 9A-91 </MenuItem>
                       <MenuItem component={<Link to={"/Ak12-details"} className='link text_from_sidebar'/>}> AK-12 </MenuItem>
                       <MenuItem component={<Link to={"/Cz805bren-details"} className='link text_from_sidebar'/>}> CZ 805 BREN </MenuItem>
@@ -94,9 +94,11 @@ const SideBarMenu = () => {
                       <MenuItem component={<Link to={"/Xm29oicw-details"} className='link text_from_sidebar'/>}> XM29 OICW </MenuItem>
                       <MenuItem component={<Link to={"/Xm8-details"} className='link text_from_sidebar'/>}> XM8 </MenuItem>
                       <MenuItem component={<Link to={"/Norinco86s-details"} className='link text_from_sidebar'/>}> Norinco Type 86S </MenuItem>
+                      <MenuItem component={<Link to={"/Ar10-details"} className='link text_from_sidebar'/>}> AR-10 </MenuItem>
+                      <MenuItem component={<Link to={"/Remingtonacr-details"} className='link text_from_sidebar'/>}> Remington ACR </MenuItem>
                     </SubMenu>
                     <SubMenu className='text_from_sidebar' icon={<GiCrosshair />} label="Sniper Rifles">
-                      <MenuItem component={<Link to={"/Springfield1855-details"} className='link text_from_sidebar'/>}> Springfield Model 1855 </MenuItem>
+                      <MenuItem component={<Link to={"/Springfield1855-details"} className='link text_from_sidebar'/>}> Springfield M1855 </MenuItem>
                       <MenuItem component={<Link to={"/Karabiner98k-details"} className='link text_from_sidebar'/>}> Kar98K </MenuItem>
                     </SubMenu>
                     <SubMenu className='text_from_sidebar' icon={<GiSawedOffShotgun />} label="Shotguns">

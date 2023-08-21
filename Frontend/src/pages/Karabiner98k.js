@@ -1,9 +1,28 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import { useEffect, useState } from "react";
+
 import K98Model from "./3dModels/mauser_k98_sniper_rilfe/Mauser_k98_sniper_rilfe";
+
+import './css/weapon-modifications.css';
 
 
 const Karabiner98kPage = () => {
+    const [ weaponInfo, setWeaponInfo ] = useState([]);
+    const [ isLoading, setIsLoading ] = useState(false);
+    
+    const fetch9a91Data = () => {
+        setIsLoading(true)
+        fetch("http://localhost:3005/weapons/64c03ac9a597d34c6d8694bd")
+        .then(response => response.json())
+        .then(data => {
+            setIsLoading(false)
+            console.log(data);
+            setWeaponInfo(data);
+        })
+    };
+
+    useEffect(() => { fetch9a91Data() }, []);
 
     return(
         <div className="main_div">
@@ -34,15 +53,45 @@ const Karabiner98kPage = () => {
             </div>
             </div>
             <span className="weapon_inspection_text">Weapon Inspection</span>
-            <h1 className="text-center mt-5">Kar98k</h1>
-            <h6 className="text-center mb-5">also known as "The Karabiner 98 Kurz"</h6>
+            <h1 className="title_text text-center mt-5">Kar98k</h1>
+            <h6 className="subtitle_text text-center mb-5">also known as "The Karabiner 98 Kurz"</h6>
             <div className="weapon_model_box" style={{width: '95vw', height: '50vh', margin: 'auto'}}>
+            {isLoading && <div className="spinner-border" style={{width: "5rem", height: "5rem"}} role="status"> <span className="sr-only"></span></div>}
                 <Canvas>
                     <directionalLight position={[1,1,1]} intensity={15} />
                     <directionalLight position={[-1,-1,-1]} intensity={15} />
                         <K98Model />
                     <OrbitControls />
                 </Canvas>
+                <div>
+                        {weaponInfo.map(weapon => (
+                            <div key={weapon._id}>
+                                <div className="d-flex justify-content-around mt-5">
+                                     <div>
+                                        <span className="category_title_span">Type</span> 
+                                        <span className="category_content_span">{weapon.type}</span>
+                                    </div>
+                                    <div>
+                                        <span className="category_title_span">Design Year</span> 
+                                        <span className="category_content_span">{weapon.designYear}</span>
+                                    </div>
+                                    <div>
+                                        <span id="efr_span" className="category_title_span">Effective Firing Range</span> 
+                                        <span className="category_content_span">{weapon.effectiveFiringRange}</span>
+                                    </div>
+                                    <div>
+                                        <span className="category_title_span">Rate of Fire</span> 
+                                        <span className="category_content_span">{weapon.rateOfFire}*</span>
+                                    </div>
+                                </div>
+                                <div className="description_div w-100">
+                                    <span className="category_title_span_description">Description</span> 
+                                    <div className="category_content_span_description">{weapon.description}</div>
+                                </div>
+                                <div>*RPM = Rounds Per Minute</div>
+                            </div>
+                        ))}
+                </div>
             </div>
         </div>
     )
