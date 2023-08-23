@@ -50,7 +50,7 @@ const Main = () => {
             <Row>
                 <Col className="mt-5 sm-6 md-4 lg-3 xl-2">
                     <div className="mt-5 d-flex justify-content-center align-items-center flex-wrap">
-                    {isLoading && <div className="spinner-border" style={{width: "5rem", height: "5rem"}} role="status"> <span className="sr-only"></span></div>}
+                    {isLoading && <div className="spinner-border" style={{width: "10rem", height: "10rem"}} role="status"> <span className="sr-only"></span></div>}
                         {weaponInfo.map(weapon => (
                             <div key={weapon._id} onClick={(event) => onClick(event, "")}>
                                 <Nav>

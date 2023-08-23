@@ -7,6 +7,7 @@ import { loggingMiddleware } from "./Middlewares/logging.js";
 
 import { router as weaponRouter } from "./Routes/weapon.js";
 import { router as userRouter} from "./Routes/user.js"
+import { errorHandling } from "./Middlewares/errorHandling.js";
 
 
 initDB();
@@ -37,6 +38,7 @@ app.all("*", (request, response) => {
     response.send('Not Found');
 });
 
+app.use(errorHandling);
 
 app.listen(process.env.APP_PORT, () => {
     console.log(`Listening on port ${process.env.APP_PORT}`);

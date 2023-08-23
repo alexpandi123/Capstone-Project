@@ -15,7 +15,8 @@ const UserLoginPage = (props) => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        fetch('http://localhost:3005/users/add-new-user', {
+        try{
+        fetch('http://localhost:3005/users/login', {
                     method: 'POST',
                     body: JSON.stringify(formData),
                     headers: {'Content-Type': 'application/json'}
@@ -26,16 +27,23 @@ const UserLoginPage = (props) => {
                 setConfirmation(false);
             }, 3000);
             event.target.reset();
+        }
+        catch (error) {
+            console.error(error.message);
+        }
     };
 
     return(
         <div className="w-100">
-                <h3 className="m-auto mt-5 mb-5 d-block w-50 text-center">
+                <h2 className="m-auto mt-5 mb-5 d-block w-50 text-center title_text">
                     Log In:
-                </h3>
+                </h2>
                     <Form onSubmit={handleSubmit} className="d-flex flex-column align-items-center justify-content-center sm-6 md-4 lg-3 xl-2">
                             <FloatingLabel label="Name" className="mb-2">
                                 <Form.Control name="username" onChange={(event) => setformData({...formData, username: event.target.value})} type="string" placeholder="name" />
+                            </FloatingLabel>
+                            <FloatingLabel label="E-mail" className="mb-2">
+                                <Form.Control name="username" onChange={(event) => setformData({...formData, email: event.target.value})} type="string" placeholder="email" />
                             </FloatingLabel>
                             <FloatingLabel label="Password" className="mb-2">
                                 <Form.Control name="password" onChange={(event) => setformData({...formData, password: event.target.value})} type="string" placeholder="password"  />
