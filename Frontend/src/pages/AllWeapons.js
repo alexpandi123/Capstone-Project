@@ -8,7 +8,6 @@ import { Col, Nav, Pagination, Row } from "react-bootstrap";
 
 import './css/main-page-image.css';
 
-
 const AllWeaponsPage = () => {
     const [ weaponInfo, setWeaponInfo ] = useState([]);
 

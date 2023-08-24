@@ -24,7 +24,7 @@ const AddNewWeaponPage = (props) => {
 
     return(
         <div className="w-100">
-                <h3 className="m-auto mt-5 mb-5 d-block w-50 text-center h3_size">
+                <h3 className="m-auto mt-5 mb-5 d-block w-50 text-center h3_size title_text">
                     Please enter the details of the new weapon below:
                 </h3>
                 <div className="pos_rel">
