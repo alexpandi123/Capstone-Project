@@ -22,17 +22,21 @@ const UserRegisterPage = (props) => {
                 body: JSON.stringify(formData),
                 headers: {'Content-Type': 'application/json'}
             })
-            if (!Response.ok) {
-                setErrorMessage(true);
-                setTimeout(() => {
-                    setErrorMessage(false);
-                }, 3000);
-            } else {
-                setConfirmation(true);
-                setTimeout(() => {
-                    setConfirmation(false);
-                }, 3000);
-            }
+            .then(response => {
+                let success = response.ok;
+
+                    if(!success) {
+                        setErrorMessage(true);
+                        setTimeout(() => {
+                            setErrorMessage(false);
+                        }, 3000);
+                    } else {
+                        setConfirmation(true);
+                        setTimeout(() => {
+                            setConfirmation(false);
+                        }, 3000);
+                    };
+            });
             event.target.reset();
         }
         catch (error) {
@@ -56,10 +60,10 @@ const UserRegisterPage = (props) => {
                                 <Form.Control name="password" onChange={(event) => setformData({...formData, password: event.target.value})} type="string" placeholder="password"  />
                             </FloatingLabel>
                             <Button className="mt-5 mb-5" type="submit" variant="outline-danger">Submit</Button>
-                            {confirmation && <p>User Added Succesfully!</p>}
-                            {errorMessage && <p>User Already Exists!</p>}
-
+                            <div>{errorMessage && <p>User Already Exists!</p>}</div>
+                            <div>{confirmation && <p>User Added Succesfully!</p>}</div>
                     </Form>
+                            
         </div>
     );
 };

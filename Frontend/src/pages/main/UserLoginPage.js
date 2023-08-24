@@ -10,22 +10,32 @@ import { useState } from "react";
 const UserLoginPage = (props) => {
     const [ formData, setformData ] = useState(props.formData);
     const [ confirmation, setConfirmation ] = useState(false)
-
+    const [ errorMessage, setErrorMessage ] = useState(false);
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
         try{
-        fetch('http://localhost:3005/users/login', {
+                 fetch('http://localhost:3005/users/login', {
                     method: 'POST',
                     body: JSON.stringify(formData),
                     headers: {'Content-Type': 'application/json'}
                 })
-
-            setConfirmation(true);
-            setTimeout(() => {
-                setConfirmation(false);
-            }, 3000);
+                .then(response => {
+                    let success = response.ok;
+    
+                        if(!success) {
+                            setErrorMessage(true);
+                            setTimeout(() => {
+                                setErrorMessage(false);
+                            }, 3000);
+                        } else {
+                            setConfirmation(true);
+                            setTimeout(() => {
+                                setConfirmation(false);
+                            }, 3000);
+                        };
+                });
             event.target.reset();
         }
         catch (error) {
@@ -36,7 +46,7 @@ const UserLoginPage = (props) => {
     return(
         <div className="w-100">
                 <h2 className="m-auto mt-5 mb-5 d-block w-50 text-center title_text">
-                    Log In:
+                    LOG IN:
                 </h2>
                     <Form onSubmit={handleSubmit} className="d-flex flex-column align-items-center justify-content-center sm-6 md-4 lg-3 xl-2">
                             <FloatingLabel label="Name" className="mb-2">
@@ -49,7 +59,8 @@ const UserLoginPage = (props) => {
                                 <Form.Control name="password" onChange={(event) => setformData({...formData, password: event.target.value})} type="string" placeholder="password"  />
                             </FloatingLabel>
                             <Button className="mt-5 mb-5" type="submit" variant="outline-danger">Submit</Button>
-                            {confirmation && <div>Logged in Succesfully!</div>}
+                            <div>{errorMessage && <p>Wrong Credentials!</p>}</div>
+                            <div>{confirmation && <p>Log In Succesfull!</p>}</div>
                     </Form>
         </div>
     );
